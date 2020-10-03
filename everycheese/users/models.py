@@ -12,6 +12,9 @@ class User(AbstractUser):
         _("Name of User"), blank=True, max_length=255
     )
 
+    bio = models.TextField("Bio", blank=True)
+
+
     def get_absolute_url(self):
         return reverse(
             "users:detail", kwargs={"username": self.username}

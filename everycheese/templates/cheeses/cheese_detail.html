@@ -12,10 +12,14 @@
     <p>Firmness: {{ cheese.get_firmness_display }}</p>
 {% endif %}
 
-
-
 {% if cheese.description %}
     <p>Description: {{ cheese.description }}</p>
+{% endif %}
+
+{% if cheese.country_of_origin %}
+    <p>Country of Origin: {{ cheese.country_of_origin.name }}
+        <img src="{{ cheese.country_of_origin.flag }}" />
+    </p>
 {% endif %}
 
 

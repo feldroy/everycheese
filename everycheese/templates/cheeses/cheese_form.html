@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block title %}Add Cheese{% endblock title %}
 
@@ -9,7 +10,8 @@
 
 <form method="post" action="{% url 'cheeses:add' %}">
 {% csrf_token %}
-{{ form.as_p }}
+
+{{ form|crispy }}
 
 <button type="submit" class="btn btn-primary">Save</button>
 </form>

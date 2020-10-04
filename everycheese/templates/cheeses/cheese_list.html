@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Cheese List{% endblock title %}
+
+{% block content %}
+
+
+
+<h2>Cheese List </h2>
+
+<ul>
+{% for cheese in cheese_list %}
+    <li><a href="#TODO">{{ cheese.name }}</a></li>
+{% endfor %}
+</ul>
+
+
+
+
+
+{% endblock content %}
+

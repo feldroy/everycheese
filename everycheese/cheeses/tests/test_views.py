@@ -5,7 +5,7 @@ from django.urls import reverse
 
 
 from .factories import UserFactory
-from .factories import CheeseFactory
+from .factories import CheeseFactory, cheese
 from ..models import Cheese
 from ..views import (
     CheeseListView,
@@ -40,8 +40,7 @@ def test_good_cheese_list_view(rf):
     assertContains(response, 'Cheese List')    
 
 
-def test_good_cheese_detail_view(rf):
-    cheese = CheeseFactory()
+def test_good_cheese_detail_view(rf, cheese):
     url = reverse('cheeses:detail',
             kwargs={'slug': cheese.slug}
     )

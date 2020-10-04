@@ -19,6 +19,4 @@ urlpatterns = [
         view=views.CheeseDetailView.as_view(),
         name='detail'
     ),
-
-
 ]
